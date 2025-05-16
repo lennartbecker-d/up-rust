@@ -38,6 +38,8 @@ impl RequestListener {
         let transport_clone = self.transport.clone();
         let request_handler_clone = self.request_handler.clone();
 
+        debug!("valid request message received: {:?}", request_message);
+
         let request_id = request_message
             .attributes
             .get_or_default()
